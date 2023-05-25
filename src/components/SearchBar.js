@@ -2,11 +2,18 @@ import React from "react";
 import { View, TextInput, StyleSheet } from "react-native";
 import { Octicons } from "@expo/vector-icons";
 
-const SearchBar = () => {
+const SearchBar = ({ term, onTermChange }) => {
   return (
     <View style={style.backgroundStyle}>
       <Octicons name='search' style={style.iconStyle} />
-      <TextInput style={style.inputStyle} placeholder='Search' />
+      <TextInput
+        autoCapitalize='none'
+        autoCorrect={false}
+        style={style.inputStyle}
+        placeholder='Search'
+        value={term}
+        onChangeText={(newTerm) => onTermChange(newTerm)}
+      />
     </View>
   );
 };

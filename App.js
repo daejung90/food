@@ -8,12 +8,12 @@ const navigator = createStackNavigator(
   {
     Search: SearchScreen,
     SearchBar: SearchBar,
-    ResultsShow: ResultsShowScreen
+    ResultsShow: ResultsShowScreen,
   },
   {
     initialRouteName: "Search",
     defaultNavigationOptions: {
-      title: "Business Search",
+      title: "Restaurant Search",
     },
   }
 );

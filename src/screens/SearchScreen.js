@@ -32,6 +32,8 @@ const SearchScreen = () => {
   );
 };
 
-const style = StyleSheet.create({});
+const style = StyleSheet.create({
+  
+});
 
 export default SearchScreen;

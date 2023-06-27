@@ -4,6 +4,7 @@ import SearchBar from "./src/components/SearchBar";
 import SearchScreen from "./src/screens/SearchScreen";
 import ResultsShowScreen from "./src/screens/ResultsShowScreen";
 
+//app main file, creating the navigation page
 const navigator = createStackNavigator(
   {
     Search: SearchScreen,

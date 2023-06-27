@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import ResultsItem from "./ResultsItem";
+import { withNavigation } from "react-navigation";
 
 const ResultsList = ({ title, results, navigation }) => {
   return (
@@ -21,10 +22,12 @@ const ResultsList = ({ title, results, navigation }) => {
         renderItem={({ item }) => {
           return (
             <TouchableOpacity
-              onPress={() => navigation.navigate("ResultsShow")}>
+              onPress={() =>
+                navigation.navigate("ResultsShow", { id: item.id })
+              }>
               <ResultsItem result={item} />
             </TouchableOpacity>
-          )
+          );
         }}
       />
     </View>
@@ -39,4 +42,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ResultsList;
+export default withNavigation(ResultsList);
